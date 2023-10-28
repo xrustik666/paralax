@@ -102,7 +102,7 @@ header .nav {
 	display: block;
 
 	font-weight: 900;
-	/*text-transform: uppercase;*/
+	text-transform: uppercase;
 
 	transform: translate3d(0, calc(var(--scrolling) / 2), 0);
 }
