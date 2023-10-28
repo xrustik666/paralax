@@ -1,4 +1,4 @@
-/* Variables declaring */
+/* All variables declaring */
 let headerNav = document.querySelector("header .nav");
 let footerNav = document.querySelector("footer .nav");
 
