@@ -1,0 +1,139 @@
+/* General properties */
+* {
+	/* border: 1px solid black; */
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+
+	background-color: pink;
+}
+
+.nav {
+	position: fixed;
+	z-index: 100;
+}
+
+.nav p {
+	padding: 5px 15px;
+	cursor: pointer;
+}
+
+.caption {
+	font-size: 20px;
+}
+
+.description {
+	font-size: 10px;
+}
+
+/* Header section properties */
+header .nav {
+	right: 0;
+
+	display: flex;
+	justify-content: space-around;
+	
+	min-width: 20%;
+}
+
+/* Main section properties */
+.layers {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+
+	height: 120vh;
+	
+	text-align: center;
+	overflow: hidden;
+}
+
+.layer {
+	position: absolute;
+
+	height: 100%;
+	width: 100%;
+
+	background-size: cover;
+	background-position: center;
+}
+
+/* Main section properties. Background layers */
+.layer-base {
+	background-image: url(https://images2.imgbox.com/3d/28/gVPge1Ww_o.png);
+
+	transform: translate3d(0, calc(var(--scrolling) / 2), 0);
+	z-index: 0;
+}
+
+.layer-middle {
+	background-image: url(https://images2.imgbox.com/57/d4/GaJ8SgA4_o.png);
+
+	transform: translate3d(0, calc(var(--scrolling) / 3), 0);
+	z-index: 2;
+}
+
+.layer-front {
+	background-image: url(https://images2.imgbox.com/26/af/kUsiNsjP_o.png);
+
+	transform: translate3d(0, calc(var(--scrolling) / 6), 0);
+	z-index: 3;
+}
+
+/* Main section properties. Article layer */
+.layer-article {
+	min-width: 30%;
+	margin-left: auto;
+	margin-right: 80px;
+	margin-bottom: 200px;
+
+	z-index: 1;
+}
+
+.welcome-info {
+	display: block;
+
+	font-weight: 900;
+	text-transform: uppercase;
+
+	transform: translate3d(0, calc(var(--scrolling) / 2), 0);
+}
+
+.about-info {
+	display: none;
+
+	font-weight: 900;
+	text-transform: uppercase;
+
+	transform: translate3d(0, calc(var(--scrolling) / 2), 0);
+}
+
+.contact-info {
+	display: none;
+
+	font-weight: 900;
+	text-transform: uppercase;
+
+	transform: translate3d(0, calc(var(--scrolling) / 2), 0);
+}
+
+/* Footer section properties */
+footer .nav {
+	bottom: 0;
+
+	left: 50%;
+	transform: translateX(-50%);
+	
+	display: none;
+	justify-content: space-around;
+	
+	min-width: 25%;
+}
