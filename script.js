@@ -4,6 +4,8 @@ let footerNav = document.querySelector("footer .nav");
 
 let upButton = document.querySelector(".scrollUp");
 
+let downScroll = document.querySelector(".downScroll");
+
 let homeButton = document.querySelectorAll(".home");
 let welcomeInfo = document.querySelector(".welcome-info");
 
@@ -26,6 +28,12 @@ window.addEventListener('scroll', function() {
 		headerNav.style.display = "flex";
 		footerNav.style.display = "none";
 	}
+  /* Caption "Scroll down" will appear or disappear, depending on scroll*/
+  if (window.scrollY > 100) {
+    downScroll.style.display = "none";
+  } else {
+    downScroll.style.display = "block";
+  }
 });
 
 /* Returns to the top */
@@ -53,4 +61,3 @@ for (let i = 0; i <= 1; i++) {
 		aboutInfo.style.display = "none";
 	});
 }
-
