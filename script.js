@@ -21,7 +21,7 @@ window.addEventListener('scroll', function() {
 	document.documentElement.style.setProperty('--scrolling', scrollY + 'px');
 
 	/* Upper menu disappears, lower menu apperas when user scrolls the page */
-	if(window.scrollY > 80) {
+	if(window.scrollY > 50) {
 		headerNav.style.display = "none";
 		footerNav.style.display = "flex";
 	} else {
@@ -29,7 +29,7 @@ window.addEventListener('scroll', function() {
 		footerNav.style.display = "none";
 	}
   /* Caption "Scroll down" will appear or disappear, depending on scroll*/
-  if (window.scrollY > 100) {
+  if (window.scrollY > 90) {
     downScroll.style.display = "none";
   } else {
     downScroll.style.display = "block";
